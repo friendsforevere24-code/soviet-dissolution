@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Dissolution of the Soviet Union (1985–1991)</title>
+<style>
+  :root{
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --accent: #1f4fb8;
+    --red: #b22222;
+    --muted:#6b7280;
+    --shadow: 0 8px 24px rgba(15,23,42,0.06);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#eef5ff 0%,var(--bg) 100%);color:#0f172a}
+  .container{max-width:1150px;margin:26px auto;padding:0 20px;}
+
+  /* header */
+  header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+  .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#6c5ce7);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:var(--shadow)}
+  h1{margin:0;font-size:20px}
+  p.subtitle{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+  /* layout */
+  main{display:grid;grid-template-columns:1fr 360px;gap:20px}
+  @media (max-width:980px){main{grid-template-columns:1fr}}
+
+  /* cards */
+  .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);margin-bottom:18px}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  @media (max-width:700px){.grid-2{grid-template-columns:1fr}}
+
+  .meta{color:var(--muted);font-size:13px;margin-top:8px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;border:0;cursor:pointer;font-weight:600}
+  .btn.secondary{background:#fff;border:1px solid rgba(31,79,184,0.12);color:var(--accent)}
+
+  /* timeline track */
+  .timeline{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(15,23,42,0.04)}
+  .timeline-track{position:relative;height:110px;margin-top:12px}
+  .track-line{position:absolute;left:40px;right:40px;top:50%;height:4px;background:#e6eefb;border-radius:4px}
+  .tick{position:absolute;top:50%;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid #c7ddff;display:flex;align-items:center;justify-content:center;font-size:11px;color:#0f172a;box-shadow:0 8px 18px rgba(12,39,86,0.06);cursor:pointer}
+  .tick.active{background:var(--red);border:3px solid #fff;color:white}
+  .tick:focus{outline:3px solid rgba(31,79,184,0.18)}
+  .event-card{margin-top:12px;padding:12px;border-radius:10px;background:#fff7f7;border:1px solid rgba(178,34,34,0.06)}
+
+  /* right column */
+  aside{position:sticky;top:24px}
+  .small{font-size:13px;color:var(--muted)}
+  .sources li{margin-bottom:8px}
+
+  details summary{cursor:pointer;padding:10px;border-radius:8px;background:#f8fafc;border:1px solid rgba(15,23,42,0.03);font-weight:600;list-style:none}
+  details .content{padding:12px;font-size:14px;color:var(--muted)}
+
+  footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+  img.responsive{width:100%;max-height:220px;object-fit:cover;border-radius:8px;display:block;margin-top:12px}
+</style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="logo" aria-hidden="true">USSR</div>
+      <div>
+        <h1>The Dissolution of the Soviet Union (1985–1991)</h1>
+        <p class="subtitle">Causes, key events, and global consequences —</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT -->
+      <section>
+        <article class="card" aria-labelledby="overview-heading">
+          <h2 id="overview-heading">Overview</h2>
+          <p class="small">The Soviet Union (USSR) officially dissolved on <strong>December 25, 1991</strong>. This mini-site summarizes main causes, pivotal events, key people, and worldwide consequences.</p>
+          <div class="meta"><strong>Date:</strong> 25 Dec 1991 &nbsp;&nbsp; <strong>Location:</strong> Moscow, Kremlin &nbsp;&nbsp; <strong>Key Figures:</strong> M. Gorbachev, B. Yeltsin</div>
+
+          <div style="display:flex;gap:14px;align-items:flex-start;margin-top:14px;flex-wrap:wrap">
+            <div style="flex:1;min-width:220px">
+              <button class="btn" id="startTour">Start timeline tour</button>
+              <a class="btn secondary" href="#sources" style="text-decoration:none;margin-left:8px">Sources & further reading</a>
+              <p class="small" style="margin-top:10px">Map and timeline placeholder — the interactive timeline is below.</p>
+            </div>
+            <div style="width:220px;min-width:180px">
+              <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Soviet_Union_-_1989.svg/600px-Soviet_Union_-_1989.svg.png" alt="Map of USSR 1989">
+            </div>
+          </div>
+        </article>
+
+        <!-- Causes -->
+        <article class="card" id="causes">
+          <h2>Causes & Internal Struggles</h2>
+          <div class="grid-2" style="margin-top:12px">
+            <div>
+              <h4 style="margin:0 0 6px">Economic Problems</h4>
+              <p class="small">Chronic shortages, declining industrial output, and an inefficient planned economy weakened state control by the 1980s.</p>
+              <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Empty_Soviet_store_shelves.jpg" alt="Empty store shelves USSR">
+            </div>
+            <div>
+              <h4 style="margin:0 0 6px">Political Reforms & Division</h4>
+              <p class="small">Gorbachev’s perestroika & glasnost opened debate but divided the elite, spawning conservative backlash and reformist momentum.</p>
+              <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Mikhail_Gorbachev_1987.jpg" alt="Mikhail Gorbachev 1987">
+            </div>
+
+            <div>
+              <h4 style="margin:0 0 6px">Rise of Nationalism</h4>
+              <p class="small">Republics such as Lithuania, Latvia, Estonia and Ukraine pushed for independence, challenging central authority.</p>
+              <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Singing_Revolution_in_Tallinn_1988.jpg" alt="Baltic independence movement">
+            </div>
+            <div>
+              <h4 style="margin:0 0 6px">Crisis of Legitimacy</h4>
+              <p class="small">Events like Chernobyl and failures of central planning eroded public trust in the regime.</p>
+              <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/6/69/Chernobyl_reactor_no_4.jpg" alt="Chernobyl reactor">
+            </div>
+          </div>
+        </article>
+
+        <!-- Interactive Timeline -->
+        <article class="card timeline" aria-labelledby="timeline-heading">
+          <h2 id="timeline-heading">Interactive Timeline (1985 – 1991)</h2>
+          <p class="small">Click any dot to see a short explanation. Use the "Start timeline tour" button to cycle through highlights.</p>
+
+          <div class="timeline-track" role="list" aria-label="timeline">
+            <div class="track-line" aria-hidden="true"></div>
+
+            <!-- ticks (positions chosen to fit labels) -->
+            <div class="tick" role="button" tabindex="0" data-index="0" style="left:6%">1985</div>
+            <div class="tick" role="button" tabindex="0" data-index="1" style="left:24%">1986</div>
+            <div class="tick" role="button" tabindex="0" data-index="2" style="left:40%">1987</div>
+            <div class="tick" role="button" tabindex="0" data-index="3" style="left:58%">1989</div>
+            <div class="tick" role="button" tabindex="0" data-index="4" style="left:76%">1991 (Aug)</div>
+            <div class="tick" role="button" tabindex="0" data-index="5" style="left:92%">1991 (Dec)</div>
+          </div>
+
+          <div id="eventDisplay" class="event-card" aria-live="polite">
+            <strong>Dec 1991 — Official dissolution</strong>
+            <div class="small" style="margin-top:8px">
+              December 8: Belavezha Accords (Russia, Ukraine, Belarus) declared USSR dissolved. December 25: Gorbachev resigned and the Soviet flag was lowered over the Kremlin for the last time.
+            </div>
+          </div>
+        </article>
+
+        <!-- Key Events (short detail) -->
+        <article class="card">
+          <h2>Key Events (short detail)</h2>
+          <details open>
+            <summary>1985 – Gorbachev becomes General Secretary</summary>
+            <div class="content">Introduced reforms intended to modernize the Soviet economy and open political discussion; these weakened centralized control and raised expectations for change.</div>
+          </details>
+
+          <details>
+            <summary>1986 – Chernobyl disaster</summary>
+            <div class="content">The government's handling damaged public trust and revealed systemic failings in crisis management.</div>
+          </details>
+
+          <details>
+            <summary>1987 – INF & arms-reduction momentum</summary>
+            <div class="content">Arms-control treaties and thawing superpower tensions altered the global context around the USSR.</div>
+          </details>
+
+          <details>
+            <summary>1989 – Fall of the Berlin Wall</summary>
+            <div class="content">A major sign that Soviet influence over Eastern Europe was collapsing, accelerating change inside the USSR.</div>
+          </details>
+
+          <details>
+            <summary>1991 (August) – The August Coup</summary>
+            <div class="content">Hardliners attempted to seize power from Gorbachev. The coup failed but weakened central authority and boosted regional leaders like Boris Yeltsin.</div>
+          </details>
+
+          <details>
+            <summary>1991 (Dec 8) – Belavezha Accords</summary>
+            <div class="content">Leaders of Russia, Ukraine, and Belarus declared the USSR effectively dissolved, forming the Commonwealth of Independent States (CIS).</div>
+          </details>
+
+          <details>
+            <summary>1991 (Dec 25) – Gorbachev resigns</summary>
+            <div class="content">The Soviet flag was lowered and replaced by the Russian tricolor; the USSR ceased to exist as a political entity.</div>
+          </details>
+        </article>
+
+        <!-- Impact -->
+        <article class="card">
+          <h2>Impact & Global Consequences</h2>
+          <ul style="margin:10px 0;color:var(--muted)">
+            <li>End of the Cold War and bipolar global order → the U.S. emerged as the sole superpower.</li>
+            <li>Fifteen independent states emerged (Russia, Ukraine, Baltic states, etc.).</li>
+            <li>NATO and EU later expanded eastward; long-term geopolitical shifts continue to influence Europe.</li>
+            <li>Economic transition caused severe short-term hardship in many republics, with mixed long-term outcomes.</li>
+          </ul>
+          <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_map_of_former_Soviet_Union.png" alt="Map showing former USSR republics">
+        </article>
+      </section>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside>
+        <div class="card">
+          <h3>Important People</h3>
+          <div style="margin-top:8px">
+            <strong>Mikhail Gorbachev</strong>
+            <div class="small">Last leader of the USSR; his reforms unintentionally hastened collapse.</div>
+            <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Mikhail_Gorbachev_1987.jpg" alt="Mikhail Gorbachev">
+            <strong style="margin-top:8px;display:block">Boris Yeltsin</strong>
+            <div class="small">President of the Russian Federation; prominent regional leader during 1991 crisis.</div>
+            <img class="responsive" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Boris_Yeltsin_1991.jpg" alt="Boris Yeltsin">
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Quick Facts</h3>
+          <ul style="margin:10px 0;color:var(--muted)">
+            <li>The USSR existed from 1922 to 1991 (69 years).</li>
+            <li>The Belavezha Accords (Dec 8, 1991) declared the USSR dissolved.</li>
+            <li>Official dissolution: Dec 25, 1991 (Gorbachev resigns).</li>
+          </ul>
+        </div>
+
+        <div id="sources" class="card">
+          <h3>Sources</h3>
+          <ul class="sources" style="padding-left:18px">
+            <li><a href="https://www.britannica.com/event/Dissolution-of-the-Soviet-Union" target="_blank" rel="noopener">Britannica — Dissolution of the Soviet Union</a></li>
+            <li><a href="https://www.history.com/topics/cold-war/dissolution-of-the-soviet-union" target="_blank" rel="noopener">History.com — Dissolution of the USSR</a></li>
+            <li><a href="https://www.bbc.com/news/world-europe-16258988" target="_blank" rel="noopener">BBC — The end of the Soviet Union</a></li>
+            <li><a href="https://apnews.com/article/6b58354d28bc3a727ccc4334c395e7b7" target="_blank" rel="noopener">AP News — Reunification summary</a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>Created for educational purposes • Save as <code>index.html</code> and open in a browser.</footer>
+  </div>
+
+<script>
+  // Timeline data (match order of ticks)
+  const timelineEvents = [
+    {
+      year: "1985",
+      title: "1985 — Gorbachev becomes leader",
+      text: "Mikhail Gorbachev launches perestroika (restructuring) and glasnost (openness), which loosened central control and encouraged political debate."
+    },
+    {
+      year: "1986",
+      title: "1986 — Chernobyl disaster",
+      text: "The Chernobyl disaster undermined public trust in state institutions and highlighted systemic failures."
+    },
+    {
+      year: "1987",
+      title: "1987 — Arms reduction momentum",
+      text: "Treaties and easing East-West tensions (e.g., INF) shifted the international landscape and reduced Cold War pressure."
+    },
+    {
+      year: "1989",
+      title: "1989 — Fall of the Berlin Wall",
+      text: "Revolutions across Eastern Europe removed Soviet-dominated governments and signaled the weakening of Soviet influence."
+    },
+    {
+      year: "1991Aug",
+      title: "Aug 1991 — The August Coup",
+      text: "Hardliners attempted a coup against Gorbachev; its failure further weakened the central government and strengthened regional leaders like Yeltsin."
+    },
+    {
+      year: "1991Dec",
+      title: "Dec 1991 — Official dissolution",
+      text: "December 8: Belavezha Accords (Russia, Ukraine, Belarus) declared the USSR dissolved. December 25: Gorbachev resigned and the Soviet flag was lowered over the Kremlin."
+    }
+  ];
+
+  const ticks = document.querySelectorAll('.tick');
+  const display = document.getElementById('eventDisplay');
+
+  function showEvent(i){
+    // safety: clamp
+    i = Math.max(0, Math.min(timelineEvents.length-1, i));
+    ticks.forEach(t => t.classList.remove('active'));
+    const t = ticks[i];
+    if(t) t.classList.add('active');
+
+    const ev = timelineEvents[i];
+    display.innerHTML = `<strong
